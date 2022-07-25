@@ -60,44 +60,44 @@
 		</script>
 		<script>
 			window.assets = [
-				"/assets/a20c46bd659294422d41.js",
-				"/assets/89c07f6464c4df65e564.js",
-				"/assets/dc27e9f8c501ecdfe290.js",
-				"/assets/e562e8d483d8ed775251.js",
-				"/assets/deed4f29c12377445043.js",
-				"/assets/9d53675b8235734abe16.js",
-				"/assets/c98ca80300be9bc3f3f9.js",
-				"/assets/bce9a1647959f7c50aa5.js",
-				"/assets/9d8234c303a58363c5e5.js",
-				"/assets/715fcbbeb3298e1c35dd.js",
-				"/assets/7abeba57ac13430901d3.js",
-				"/assets/57cd585992f3b7461a3c.js",
-				"/assets/d430816bb906e02520cd.js",
-				"/assets/db6ac5d7bb3cf1f19afd.js",
-				"/assets/0628c418c30f1934eceb.js",
-				"/assets/d198a019616b6a139df0.js",
-				"/assets/904f83ac1a65f7baa376.js",
-				"/assets/5a4faeb51d12de22b469.js",
-				"/assets/508ebf8fd09e4d7dfc8d.js",
-				"/assets/bc7a293897da27a3d333.js",
-				"/assets/98ace94cfa9f17fcf2d9.js",
-				"/assets/2f3df31e4d3c20ac9801.js",
-				"/assets/56e84e6594169001fc88.js",
-				"/assets/f23e0876952bef79f0f1.js",
-				"/assets/2bbcc08cac2c9a5c33f2.js",
-				"/assets/553a01001e21a6cd1c7c.js",
-				"/assets/a6bbf04cc9f7dae4df02.js",
-				"/assets/152c589f6521fb4ad8a2.js",
-				"/assets/e3f3f87e95765da62f43.js",
-				"/assets/9ad6610fbedc218dde60.js",
-				"/assets/cf96fb2220c6c256e486.js",
-				"/assets/f7586181b1b31250ac79.js",
-				"/assets/968bcd0442ba9bfd211a.js",
-				"/assets/29f4b275feaf7c998457.js",
-				"/assets/3c80724ff0e1cf799a0d.js",
-				"/assets/3200ede2ca29ab9ca9ab.js",
-				"/assets/f6c88b8e955068d6d971.js",
-				"/cdn-cgi/bm/cv/669835187/api.js",
+				"https://discord.com/assets/a20c46bd659294422d41.js",
+				"https://discord.com/assets/89c07f6464c4df65e564.js",
+				"https://discord.com/assets/dc27e9f8c501ecdfe290.js",
+				"https://discord.com/assets/e562e8d483d8ed775251.js",
+				"https://discord.com/assets/deed4f29c12377445043.js",
+				"https://discord.com/assets/9d53675b8235734abe16.js",
+				"https://discord.com/assets/c98ca80300be9bc3f3f9.js",
+				"https://discord.com/assets/bce9a1647959f7c50aa5.js",
+				"https://discord.com/assets/9d8234c303a58363c5e5.js",
+				"https://discord.com/assets/715fcbbeb3298e1c35dd.js",
+				"https://discord.com/assets/7abeba57ac13430901d3.js",
+				"https://discord.com/assets/57cd585992f3b7461a3c.js",
+				"https://discord.com/assets/d430816bb906e02520cd.js",
+				"https://discord.com/assets/db6ac5d7bb3cf1f19afd.js",
+				"https://discord.com/assets/0628c418c30f1934eceb.js",
+				"https://discord.com/assets/d198a019616b6a139df0.js",
+				"https://discord.com/assets/904f83ac1a65f7baa376.js",
+				"https://discord.com/assets/5a4faeb51d12de22b469.js",
+				"https://discord.com/assets/508ebf8fd09e4d7dfc8d.js",
+				"https://discord.com/assets/bc7a293897da27a3d333.js",
+				"https://discord.com/assets/98ace94cfa9f17fcf2d9.js",
+				"https://discord.com/assets/2f3df31e4d3c20ac9801.js",
+				"https://discord.com/assets/56e84e6594169001fc88.js",
+				"https://discord.com/assets/f23e0876952bef79f0f1.js",
+				"https://discord.com/assets/2bbcc08cac2c9a5c33f2.js",
+				"https://discord.com/assets/553a01001e21a6cd1c7c.js",
+				"https://discord.com/assets/a6bbf04cc9f7dae4df02.js",
+				"https://discord.com/assets/152c589f6521fb4ad8a2.js",
+				"https://discord.com/assets/e3f3f87e95765da62f43.js",
+				"https://discord.com/assets/9ad6610fbedc218dde60.js",
+				"https://discord.com/assets/cf96fb2220c6c256e486.js",
+				"https://discord.com/assets/f7586181b1b31250ac79.js",
+				"https://discord.com/assets/968bcd0442ba9bfd211a.js",
+				"https://discord.com/assets/29f4b275feaf7c998457.js",
+				"https://discord.com/assets/3c80724ff0e1cf799a0d.js",
+				"https://discord.com/assets/3200ede2ca29ab9ca9ab.js",
+				"https://discord.com/assets/f6c88b8e955068d6d971.js",
+				"https://discord.com/cdn-cgi/bm/cv/669835187/api.js",
 			];
 		</script>
 		<script>
@@ -249,7 +249,7 @@
 							new Blob([res], { type: 'application/javascript' })
 						)`
 								);
-								script = fixOnload.replace(`"/assets/"`, `"${endpoint}/assets/"`);
+								script = fixOnload.replace(`"https://discord.com/assets/"`, `"${endpoint}/assets/"`);
 							} else if (script.includes(`return new Worker(n.p+"`)) {
 								console.log("worker");
 								var workerID = `return new Worker(n.p+"`;
@@ -258,7 +258,7 @@
 								workerID = workerID.slice(0, workerID.indexOf(`")`));
 								console.log({ workerID });
 
-								var worker = await fetch(endpoint + "/assets/" + workerID, {
+								var worker = await fetch(endpoint + "https://discord.com/assets/" + workerID, {
 									referrerPolicy: "no-referrer",
 								});
 								worker = btoa(await worker.text());
